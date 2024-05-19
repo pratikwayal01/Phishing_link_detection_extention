@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detector</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="popup.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .phishing-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width:80vh
+        }
+
+        .phishing-card {
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: max-content;
+            text-align: center;
+        }
+
+        .phishing-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+
+        .phishing-text {
+            font-size: 16px;
+            color: #6c757d;
+            margin-bottom: 40px;
+        }
+
+        .phishing-number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+
+        .phishing-button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .phishing-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container phishing-container">
+    <div class="card phishing-card">
+        <script src="popup.js"></script>
+        <svg xmlns="http://www.w3.org/2000/svg" width="180" height="60" viewBox="-20 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-16 h-16 mb-4 text-red-600">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+        </svg>
+        <h1 class="phishing-title">Phishing Detector</h1>
+        <p class="phishing-text">Number of detected phishing websites:</p>
+        <div id="detectedCount" class="phishing-number">0</div>
+        <button class="phishing-button" onclick="refreshButtonClick()">Refresh</button>
+    </div>
+</div>
+
+</body>
+</html>

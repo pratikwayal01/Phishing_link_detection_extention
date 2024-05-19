@@ -1,0 +1,8 @@
+.special {
+    color: blue;
+    text-decoration: underline;
+}
+
+.special:hover {
+    cursor: pointer;
+}

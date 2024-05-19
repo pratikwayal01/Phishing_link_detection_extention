@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Link Extractor",
+    "version": "1.0",
+    "description": "Extracts all links from anchor tags on the current page.",
+    "permissions": ["activeTab"],
+    "host_permissions": [
+      "http://*/*", "https://*/*"
+    ],
+    "action": {
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon16.png",
+        "128": "images/icon16.png"
+      },
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon16.png",
+      "128": "images/icon16.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "externally_connectable": {
+        "matches": ["*://*.google.com/*"]
+    }
+  }
+  
