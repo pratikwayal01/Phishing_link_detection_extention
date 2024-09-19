@@ -17,7 +17,7 @@ To run the project, follow these steps:
 Clone the repository:
 
 ```bash
-git clone https://github.com/pratikwayal01/Phishing_link_detection_extention-.git
+git clone https://github.com/pratikwayal01/Phishing_link_detection_extention.git
 ```
 
 Change to the project directory:
